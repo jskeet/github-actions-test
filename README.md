@@ -1,0 +1,1 @@
+This repo exists just to make it easier to test GitHub actions.
