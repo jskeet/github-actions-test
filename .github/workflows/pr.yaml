@@ -1,0 +1,22 @@
+name: PR tseting
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+
+jobs:
+
+  diff:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Show labels
+      env:
+        LABEL_NAME: ${{github.event.label.name}}
+        ACTION: ${{github.event.action}}
+      run: |
+        echo "Start of workflow"
+        echo "Label: ${LABEL_NAME}"
+        echo "Action: ${ACTION}"
+        echo "End of workflow"
