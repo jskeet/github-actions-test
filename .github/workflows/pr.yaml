@@ -1,4 +1,4 @@
-name: PR tseting
+name: PR testing
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
 
 jobs:
 
-  diff:
+  test:
 
     runs-on: ubuntu-latest
 
